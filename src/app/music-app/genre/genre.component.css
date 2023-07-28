@@ -1,0 +1,33 @@
+#main-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.playlist-item{
+    background-color: #181818;
+    width: 220px;
+    height: 300px;
+}
+#playlist-name{
+    color: #f7fbff;
+    margin-left: 25px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+#playlist-description{
+    color: #989697;
+    margin-left: 25px;
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 22px;
+}
+#playlist-image{
+    display: flex;
+    justify-content: center;
+}
+#playlist-image img{
+    width: 180px;
+    height: 200px;
+    border-radius: 10px;
+}

@@ -1,0 +1,13 @@
+<div id="main-container">
+    <h1 class="heading" id="heading" >Browse all</h1>
+    <div id="categories">
+        <div *ngFor="let category of categoryNames">
+            <div (click)="navigateToGenerById(category.categoryId)" class="category-name" id="category-name-{{category.name}}">
+                <p id="category-name"><b>{{category.name}}</b></p>
+                <div id="category-image-parent">
+                    <img class="category-image" [src]="category.icon" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

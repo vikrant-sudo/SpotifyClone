@@ -1,0 +1,85 @@
+#main-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #14172d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#header{
+    background-color: #121327;
+    height: 20px;
+    width: 50%;
+}
+#progress-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #191c36;
+    width: 50%;
+    height: 50%;
+    gap: 20px;
+}
+#stats{
+    color: #9ea1b9;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+#instruction{
+    color: #393b56;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+#background-circle{
+    border: 5px solid ;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+#circle{
+    /* border: 5px solid #0f1225;  */
+    /* #0492fe */
+    background-color: #0f1225;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a9acc1;
+    font-size: 12px;
+    font-family: sans-serif;
+    position: relative;
+}
+#inner-circle{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #191c36;
+}
+circle{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 12;
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+    animation: progress-bar 5s linear forwards;
+}
+svg{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes progress-bar{
+    100%{
+        stroke-dashoffset: 0;
+    }
+}

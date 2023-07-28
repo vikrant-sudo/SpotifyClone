@@ -1,0 +1,38 @@
+#main-container{
+    box-sizing: border-box;
+}
+#heading{
+    color: #ffffff;
+}
+#categories{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.category-name{
+    width: 200px;
+    height: 200px;
+    color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    cursor: pointer;
+}
+.category-image{
+    width: 100px;
+    height: 100px;
+    rotate: 30deg;
+    translate: 12px 10px;
+}
+#category-image-parent{
+    display: flex;
+    justify-content: end;
+}
+#category-name{
+    font-size: 22px;
+    font-family: sans-serif;
+    padding-left: 20px;
+}

@@ -1,0 +1,32 @@
+<div id="main-container">
+    <div id="header"></div>
+    <div id="valid-json">
+        <div id="image">
+            <img src="assets/tickMark.png" alt="">
+        </div>
+        <p id="success-message">Valid JSON file</p>
+        <p id="source-language">Your source language will be detected automatically</p>
+        <div id="button">
+            <div id="dropdown">
+                <label for="">Select your target language</label>
+                <button id="select-language">
+                    <input id="button-input" type="text" placeholder="Select language">
+                    <img id="open" 
+                    (click)="toggleArrow()" src="assets/dropdownOpen.png" alt="">
+                    <img id="close"
+                    (click)="toggleArrow()" src="assets/dropdownClose.jpg" alt="">
+                </button>
+                <div id="dropdown-parent">
+                    <div id="dropdown-menu">
+                        <p (click)="languageSelected('HTML')" class="language">HTML</p>
+                        <P (click)="languageSelected('Plain Text')" class="language">Plain Text</P>
+                        <p (click)="languageSelected('XML')" class="language">XML</p>
+                    </div>
+                </div>
+            </div>
+            <div id="button-parent">
+                <button id="translate" (click)="translateInto()">Translate</button>
+            </div>
+        </div>
+    </div>
+</div>

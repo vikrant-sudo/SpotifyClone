@@ -1,0 +1,71 @@
+#main-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #14172d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#header{
+    background-color: #121327;
+    height: 20px;
+    width: 50%;
+}
+#outer-div{
+    background-color: #191c36;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#select-file{
+    background-color: #191c36;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    margin: 40px;
+    border: 1px dashed #121327;
+    padding: 30px;
+    row-gap: 25px;
+}
+#select-file p{
+    color: #40435d;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+#first-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+#first-line :nth-child(2){
+    color: #61637e;
+}
+#first-line :nth-child(1){
+    color: #545671;
+}
+#first-line :nth-child(3){
+    color: #545671;
+}
+button{
+    color: #e3f1d5;
+    background-color: #0089ff;
+    height: 40px;
+    border: none;
+    width: 170px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: sans-serif;
+    cursor: pointer;
+}

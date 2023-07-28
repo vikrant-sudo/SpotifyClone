@@ -1,0 +1,20 @@
+<div id="main-container">
+    <div id="header">
+    </div>
+    <div id="outer-div">
+        <div id="select-file">
+            <div id="first-line">
+                <p>Drag and Drop your</p>
+                <p>.json</p>
+                <p>file</p>
+            </div>
+            <p>OR</p>
+            <div>
+                <button (click) = "fileInput.click()">
+                    Select files to upload
+                </button>
+                <input type="file" #fileInput style="display: none" (change)="selectFile($event)">
+            </div>
+        </div>
+    </div>
+</div>

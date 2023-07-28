@@ -1,0 +1,93 @@
+<div>
+    <div id="main-container">
+        <div id="song-header" [style.background-color]="detectedColor">
+            <div id="playlist-image">
+                <img id="playlist-image-item" [src]="playlistImageUrl" alt="">
+            </div>
+            <div id="playlist-details">
+                <div>
+                    <span id="playlist-details-type"><b>{{type}}</b></span>
+                </div>
+                <div>
+                    <span id="playlist-details-name"><b>{{name}}</b></span>
+                </div>
+                <div>
+                    <span [style.color]="descriptionColor" id="playlist-details-description">{{description}}</span>
+                </div>
+                <div id="songs-likes-total">
+                    <div id="spotify-logo">
+                        <img id="spotify-logo-image" src="assets/spotify-logo.png" alt="">
+                        <span class="font-family-size"><b>Spotify</b></span>
+                    </div>
+                    <div class="dot" id="dot-one"></div>
+                    <div id="playlist-details-totallikes-parent">
+                        <span id="playlist-details-totallikes">{{totalLikes}}</span>
+                        <span class="font-family-size">likes</span>
+                    </div>
+                    <div class="dot" id="dot-two"></div>
+                    <div id="playlist-details-totalsong-parent">
+                        <span id="playlist-details-totalsong">{{totalSong}}</span>
+                        <span class="font-family-size">songs,</span>
+                    </div>
+                    <div class="font-family-size" [style.color]="descriptionColor">
+                        <span>about</span> {{totalDurationInHour[0]}} <span>hr</span> {{totalDurationInHour[1]}} <span>min</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="save-play-button" [style.background]="getBackground()">
+            <div id="playall-parent">
+                <img id="playall" src="assets/play-allsong.png" alt="">
+            </div>
+            <div id="heart-parent">
+                <img id="heart" src="assets/heart.svg" alt="">
+            </div>
+            <div id="horizontal-parent">
+                <img id="horizontal" src="assets/more-horizontal.svg" alt="">
+            </div>
+        </div>
+        <div id="song-list">
+            <div [attr.id]="'song-item-' + song.trackId" *ngFor="let song of playlistSongDetails"
+            (mouseenter)="showHiddenElement(song.trackId)" (mouseleave)="hideHiddenElement(song.trackId)">
+                <div class="each-song-button" id="play-song-parent">
+                    <img class="hide-element" [attr.id]="'play-song-image-' + song.trackId" 
+                    src="assets/play-song.png" alt="" (click)="connectToSpotifyPlayer()">
+                </div>
+                <div id="image-trackname-artistname">
+                    <div id="song-image-parent">
+                        <img id="song-image" [src]="song.albumImage" alt="">
+                    </div>
+                    <div class="song-item-details" id="song-trackname-artistname-parent">
+                        <span>{{song.trackName}}</span>
+                        <div id="artistName-parent">
+                            <span id="artistName-list" *ngFor="let artistName of song.artistNames | ellipsis; last as isLast; index as i">
+                                <span>{{artistName.name}}</span>
+                                <span *ngIf="!isLast">,</span>
+                                <span *ngIf="!isLast">&nbsp;</span>
+                            </span>
+                            <!-- <span id="artistName-list" *ngFor="let artistName of song.artistNames">
+                                    {{artistName.name}}
+                            </span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="song-item-details" id="albumname">
+                    <span>{{song.albumName}}</span>
+                </div>
+                <div class="song-item-details" id="dateadded">
+                    <span>{{song.dateAdded}}</span>
+                </div>
+                <div class="each-song-button" id="heart-small-parent">
+                    <img class="hide-element" [attr.id]="'heart-small-image-' + song.trackId" src="assets/heart-small.svg" alt="">
+                </div>
+                <div class="song-item-details" id="duration">
+                    <span>{{song.duration}}</span>
+                </div>
+                <div class="each-song-button" id="more-horizontal-small-parent">
+                    <img class="hide-element" [attr.id]="'more-horizontal-small-image-' + song.trackId" src="assets/more-horizontal-small.svg" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

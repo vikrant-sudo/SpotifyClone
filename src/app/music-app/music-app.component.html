@@ -1,0 +1,127 @@
+<div id="music">
+    <div id="main-container">
+        <div id="top-section">
+            <div id="left-sidebar-menu">
+                <div id="home">
+                    <div class="home" (click)="navigateToHome()">
+                        <img  src="assets/home.svg" alt="">
+                    </div>
+                    <p class="home" (click)="navigateToHome()"><b>Home</b></p>
+                    <div class="search" (click)="navigateToSearch()">
+                        <img src="assets/search.svg" alt="">
+                    </div>
+                    <p class="search" (click)="navigateToSearch()"><b>Search</b></p>
+                </div>
+                <div id="library" (click)="closeSearchAnddropdownButton()">
+                    <div id="library-child-one">
+                        <div id="library-subchild-one">
+                            <div>
+                                <img src="assets/book-open.svg" alt="">
+                            </div>
+                            <p><b>Your Library</b></p>
+                        </div>    
+                        <div id="library-subchild-two">    
+                            <div>
+                                <img src="assets/plus.svg" alt="">
+                            </div>
+                            <div>
+                                <img src="assets/arrow-right.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <p id="playlist-text">Playlist</p>
+                    <div id="search-palylist">
+                        <div id="search-button">
+                            <div id="search-button-image-parent">
+                                <img id="search-button-image" (click)="showInputField($event)" src="assets/search_small.svg" alt="">
+                            </div>
+                            <div id="expended-search">
+                                <input id="search-button-input" type="text" placeholder="Search in Your Library">
+                                <img id="search-button-image-clone" src="assets/search_small.svg" alt="">
+                            </div>
+                        </div>
+                        <div id="sort">
+                            <p id="dropdown-option"><b>{{selectedSortOption}}</b></p>
+                            <div id="dropdown-button">
+                                <img id="dropdown-button-down" (click)="dropdownOptionShow($event)" src="assets/down.png" alt="">
+                                <img id="dropdown-button-up" (click)="dropdownOptionHide()" src="assets/up.png" alt="">
+                            </div>
+                            <div id="select-option">
+                                <span>Sort by</span>
+                                <div (click)="changeSortOption('Recently Added')" id="sort-item-first">
+                                    <p>Recently Added</p>
+                                    <img id="Recently Added" src="assets/check.svg" alt="">
+                                </div>
+                                <div (click)="changeSortOption('Alphabetical')" id="sort-item-second">
+                                    <p>Alphabetical</p>
+                                    <img id="Alphabetical" src="assets/check.svg" alt="">
+                                </div>
+                                <div (click)="changeSortOption('Creater')" id="sort-item-third">
+                                    <p>Creater</p>
+                                    <img id="Creater" src="assets/check.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="body-content">
+                <div id="header" [style.background-color]="detectedColor">
+                    <div id="header-left">
+                        <div id="previous">
+                            <img src="assets/left.svg" alt="">
+                        </div>
+                        <div id="next">
+                            <img src="assets/right.svg" alt="">
+                        </div>
+                    </div>
+                    <!-- <div id="header-center"> 
+                        <input id="header-center-input" type="text" placeholder="What do you want to listen to?">
+                        <div id="header-center-input-search-button">
+                            <img src="assets/search_white.svg" alt="white-image.svg">
+                        </div>
+                    </div> -->
+                    <div id="header-right">
+                        <div *ngIf="currentPath!='/music-app/search'" id="explore-premium-button">
+                            <p><b>Explore Premium</b></p>
+                        </div>
+                        <div id="install-app-button">
+                            <div id="download"></div>
+                            <p><b>Install App</b></p>
+                        </div>
+                        <div id="account"></div>
+                    </div>
+                </div>
+                <div id="body">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footer-middle" >
+                <div id="play-button">
+                    <div id="next-button-footer">
+                        <img src="assets/play-next.png" alt="">
+                    </div>
+                    <div id="play-button-footer">
+                        <img src="assets/play-button.png" alt="">
+                    </div>
+                    <div id="previous-footer">
+                        <img src="assets/previous.png" alt="">
+                    </div>
+                </div>
+                <div id="play-time">
+                    <div id="current-time">
+                        {{0.13}}
+                    </div>
+                    <div id="progress-bar"></div>
+                    <div id="total-time">
+                        {{3.35}}
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

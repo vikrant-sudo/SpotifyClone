@@ -1,0 +1,62 @@
+ #main-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #14172d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
+ #header{
+    background-color: #121327;
+    height: 20px;
+    width: 50%;
+ }
+ #invalid-json{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #191c36;
+ }
+ #image{
+   background-color: #272b49;
+   width: 60px;
+   height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ #image img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #454c71;
+ }
+ #error-message{
+    color: #aaadc5;
+    font-size: 16px;
+    font-family: sans-serif;
+ }
+ #suggestion{
+    color: #343c54;
+    font-family: sans-serif;
+    font-size: 13px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ button{
+    height: 40px;
+    width: 180px;
+    background-color: #0188ff;
+    color: #9fd1fe;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+ }

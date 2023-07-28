@@ -1,0 +1,152 @@
+#main-container{
+    color: white;
+}
+#song-header{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 275px;
+    padding-bottom: 30px;
+}
+#playlist-image{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+#playlist-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+#playlist-details-name{
+    font-size: 70px;
+    font-family: sans-serif;
+}
+#playlist-details-description{
+    font-size: 14px;
+    font-family: sans-serif;
+}
+#playlist-details-type{
+    font-size: 14px;
+    font-family: sans-serif;
+}
+#songs-likes-total{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+#playlist-details-totallikes-parent{
+    display: flex;
+    gap: 3px;
+}
+#playlist-details-totalsong-parent{
+    display: flex;
+    gap: 3px;
+}
+#spotify-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+#spotify-logo-image{
+    width: 30px;
+    height: 30px;
+}
+.font-family-size{
+    font-family: sans-serif;
+    font-size: 12;
+}
+.dot{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fbfaf8;
+}
+#playlist-image img{
+    width: 250px;
+    height: 250px;
+}
+#song-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding-left: 20px;
+}
+div[id^="song-item-"] {
+    display: grid;
+    grid-template-columns: 5% 30% 30% 15% 7% 7% 6%;
+}
+.each-song-button{
+    display: flex;
+    align-items: center;
+}
+#image-trackname-artistname{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+#song-image-parent{
+    display: flex;
+    align-items: center;
+}
+#song-image{
+    width: 40px;
+    height: 40px;
+}
+#song-trackname-artistname-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#artistName-parent{
+    /* display: flex; */
+}
+#artistName-list{
+    /* display: flex; */
+}
+#save-play-button{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+}
+#playall-parent{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1ed760;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#playall{
+    width: 25px;
+    height: 25px;
+}
+.song-item-details{
+    color: #9f9d9f;
+    height: 50px;
+}
+#albumname{
+    display: grid;
+    align-items: center;
+}
+#dateadded{
+    display: flex;
+    align-items: center;
+}
+#duration{
+    display: flex;
+    align-items: center;
+}
+img[id^="play-song-image"] {
+    display: none;
+}
+img[id^="heart-small-image"] {
+    display: none;
+}
+img[id^="more-horizontal-small-image"] {
+    display: none;
+}
+
+

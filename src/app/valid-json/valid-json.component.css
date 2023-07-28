@@ -1,0 +1,140 @@
+#main-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #14172d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#header{
+    background-color: #121327;
+    height: 20px;
+    width: 50%;
+}
+#valid-json{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #191c36;
+    width: 50%;
+    height: 50%;
+    gap: 20px;
+}
+#image{
+    background-color: #272b49;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#image img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #454c71;
+    padding: 10px;
+    margin: 10px;
+}
+#success-message{
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #a3a6be;
+}
+#source-language{
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #3b3e58;
+}
+label{
+    color: #9c9fb7;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+#translate{
+    border: none;
+    background-color: #0188ff;
+    height: 40px;
+    width: 120px;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #a8dafb;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#button-parent{
+    display: flex;
+    align-items: end;
+    padding-bottom: 10px
+}
+#button{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    column-gap: 20px
+}
+#dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+#select-language{
+    background-color: #191c36;
+    border: none;
+    color: #5b617c;
+    border: 1px solid #42445f;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-family: sans-serif;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+#select-language input{
+    background-color: #191c36;
+    border: none;
+    color: #5b617c;
+}
+input:focus {
+    border: none;
+    outline: none;
+}
+#select-language img{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+#close{
+    display: none;
+}
+#dropdown-parent{
+    position: relative
+}
+#dropdown-menu{
+    display: none;
+    font-size: 12px;
+    font-family: sans-serif;
+    color: #a3a6be;
+    background-color: #14172d;
+    padding-left: 10px;
+    position: absolute;
+    width: 60%;
+}
+#dropdown-menu p{
+    margin: 0px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.language:hover{
+    background-color: #0188ff;
+}
+#button-input::placeholder{
+    color: #5b617c;
+    font-size: 12px;
+    font-family: sans-serif;
+}

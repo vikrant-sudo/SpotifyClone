@@ -1,0 +1,13 @@
+<div>
+    <div id="main-container">
+        <div *ngFor="let playlist of playListItemsDetails">
+            <div (click)="getPlaylistDetailsById(playlist.playlistId, playlist.imageUrl)" class="playlist-item" id="playlist-{{playlist.playlistId}}">
+                <div id="playlist-image">
+                    <img [src]="playlist.imageUrl" alt="">
+                </div>
+                <p id="playlist-name"><b>{{playlist.name}}</b></p>
+                <p id="playlist-description">{{playlist.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
